@@ -1,16 +1,22 @@
 package com.wsiiz.footballclient;
 
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+import layout.LoginFragment;
+import layout.RegisterFragment;
+
+public class MainActivity extends AppCompatActivity {
 
     private Button btnLogin, btnRegister;
 
-    private FrameLayout container;
+    private LoginFragment loginFragment;
+    private RegisterFragment registerFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,14 +25,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnLogin = (Button) findViewById(R.id.btnLogin);
         btnRegister = (Button) findViewById(R.id.btnRegister);
-        container = (FrameLayout) findViewById(R.id.containerMain);
+
+
+        loginFragment = new LoginFragment();
+        registerFragment = new RegisterFragment();
+
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("hello","clicked");
+                setFragment(loginFragment);
+            }
+        });
+        btnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setFragment(registerFragment);
+            }
+        });
 
 
 
     }
-
-    @Override
-    public void onClick(View v) {
-        
+    protected void setFragment(Fragment fragment) {
+        android.support.v4.app.FragmentTransaction t = getSupportFragmentManager().beginTransaction();
+        t.replace(R.id.containerMain, fragment);
+        t.commit();
     }
+
+
 }

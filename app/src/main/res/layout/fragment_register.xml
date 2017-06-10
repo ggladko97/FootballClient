@@ -16,38 +16,38 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/editText"
+            android:id="@+id/etName"
             android:hint="Full Name" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/editText2"
+            android:id="@+id/etMailReg"
             android:hint="E-mail" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/editText3"
+            android:id="@+id/etFavorTeam"
             android:hint="Favourite team (optional)" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/editText4"
+            android:id="@+id/etPasswdReg"
             android:hint="Create Password" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/editText5"
+            android:id="@+id/etRepeatReg"
             android:hint="Repeat Password" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Register"
-            android:id="@+id/btnRegister"
+            android:id="@+id/btnReg"
             android:textColor="@color/colorAccent"
             android:theme="@style/Base.Widget.AppCompat.Button.Borderless.Colored" />
 

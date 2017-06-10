@@ -7,25 +7,27 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 
 import com.wsiiz.footballclient.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link RegisterFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link RegisterFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class RegisterFragment extends Fragment {
 
+    private EditText etName, etEmail, etTeam, etPasswd, etConfirmPasswd;
+    private Button btnReg;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_register, container, false);
+        View view = inflater.inflate(R.layout.fragment_register, container, false);
+        etName = (EditText) view.findViewById(R.id.etName);
+        etEmail = (EditText) view.findViewById(R.id.etMailReg);
+        etTeam = (EditText) view.findViewById(R.id.etFavorTeam);
+        etName = (EditText) view.findViewById(R.id.etPasswdReg);
+        etName = (EditText) view.findViewById(R.id.etRepeatReg);
+        btnReg = (Button) view.findViewById(R.id.btnReg);
+        return view;
     }
 
 

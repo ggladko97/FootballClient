@@ -33,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Log In"
-            android:id="@+id/btnLogin"
+            android:id="@+id/btnLoginSign"
             android:theme="@style/Base.Widget.AppCompat.Button.Borderless"
             android:textColor="@color/colorAccent" />
 
